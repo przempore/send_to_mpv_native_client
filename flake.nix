@@ -14,7 +14,7 @@
         };
         install-native-client = pkgs.writeShellScriptBin "install-native-client" ''
           unzip ${native_client} -d $1
-          ./install.sh
+          $1/install.sh
         '';
       in {
         devShell = pkgs.mkShell {
