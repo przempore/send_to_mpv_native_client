@@ -14,8 +14,7 @@
         };
         install-native-client = pkgs.writeShellScriptBin "install-native-client" ''
           unzip ${native_client} -d $1
-          cd app
-          node install.js
+          ./install.sh
         '';
       in {
         devShell = pkgs.mkShell {
